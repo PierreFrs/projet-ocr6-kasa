@@ -3,12 +3,30 @@
 .card {
   width: 340px;
   height: 340px;
-  background: $linearRedToBlack;
+  padding: 20px;
+  background: $red;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $linearRedToBlack;
+    z-index: 1;
+    border-radius: 10px;
+  }
 
   .card-title {
     font-size: 1.125rem;
     font-weight: normal;
     color: $white;
+    z-index: 2;
   }
 }
