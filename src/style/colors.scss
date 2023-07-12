@@ -1,0 +1,14 @@
+// Color functions
+$background-color1: #ffffff;
+$background-color2: #f6f6f6;
+$white: #ffffff;
+$red: #ff6060;
+$black: #000000;
+$gradient-start: #ff6060;
+$gradient-end: rgba(0, 0, 0, 0.5);
+$linearRedToBlack: linear-gradient(to bottom, $gradient-start, $gradient-end);
+
+// Global colors
+body {
+  background-color: $background-color1;
+}

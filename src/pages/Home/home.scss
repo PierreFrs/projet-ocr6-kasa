@@ -1,0 +1,11 @@
+@import "../../style/colors.scss";
+
+.cards-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  background-color: $background-color2;
+}

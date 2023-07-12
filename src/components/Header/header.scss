@@ -1,0 +1,27 @@
+@import "../../style/colors.scss";
+
+header {
+  width: 100%;
+  padding: 45px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo-container {
+    width: 210px;
+    height: 68px;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 57px;
+
+    .nav-link {
+      color: $red;
+    }
+    .unactive-nav-link {
+      text-decoration: none;
+    }
+  }
+}
