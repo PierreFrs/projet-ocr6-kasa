@@ -5,7 +5,7 @@ import data from "../../data.json";
 import "./home.scss"
 
 const Home = () => {
-    return <>
+    return <body>
     <Banner />
     <div className="cards-container">
         {data.map((card) => (
@@ -13,7 +13,7 @@ const Home = () => {
           
         ))}
     </div>
-    </>
+    </body>
 }
 
 export default Home

@@ -1,0 +1,25 @@
+@import "../../style/colors.scss";
+
+footer {
+  width: 100%;
+  height: 209px;
+  background-color: $black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+
+  .logo-container {
+    width: 122px;
+    margin-top: 66px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .legals {
+    color: $white;
+    font-size: 1.5rem;
+  }
+}

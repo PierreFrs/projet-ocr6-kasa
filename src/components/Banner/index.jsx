@@ -8,7 +8,7 @@ const Banner = () => {
   const isHomePage = location.pathname === "/";
   return (
     
-    <div className={`banner background ${isHomePage ? "background1" : "background2"}`}>
+    <div className={`banner ${isHomePage ? "background1" : "background2"}`}>
       {isHomePage && <h1 className='main-title'>Chez vous, partout et ailleurs</h1>}
     </div>
   )

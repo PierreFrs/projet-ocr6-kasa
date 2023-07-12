@@ -12,7 +12,7 @@
 
   .main-title {
     color: $white;
-    font-size: 48px;
+    font-size: 3rem;
     z-index: 2;
     text-align: center;
     font-weight: normal;
@@ -30,18 +30,18 @@
   }
 }
 
-.background {
+.background1 {
+  background: url("../../assets/background-img1.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
-.background1 {
-  background: url("../../assets/background-img1.jpg") no-repeat center center
-    fixed;
-}
 
 .background2 {
-  background: url("../../assets/background-img2.jpg") no-repeat center center
-    fixed;
+  background: url("../../assets/background-img2.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
