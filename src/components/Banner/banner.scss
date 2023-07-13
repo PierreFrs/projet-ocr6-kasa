@@ -1,4 +1,5 @@
 @import "../../style/colors.scss";
+@import "../../style/responsive-breakpoints.scss";
 
 .banner {
   width: 100%;
@@ -44,4 +45,15 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+@media screen and (max-width: $mobileMaxWidth) {
+  .banner {
+    border-radius: 10px;
+    height: 111px;
+
+    .main-title {
+      font-size: 1.5rem;
+    }
+  }
 }

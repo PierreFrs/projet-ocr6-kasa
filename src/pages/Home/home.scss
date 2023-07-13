@@ -1,5 +1,5 @@
 @import "../../style/colors.scss";
-@import "../../style/page-layout.scss";
+@import "../../style/responsive-breakpoints.scss";
 
 .cards-container {
   width: 100%;
@@ -14,5 +14,10 @@
 
   .card-link {
     text-decoration: none;
+  }
+}
+
+@media screen and (max-width: $mobileMaxWidth) {
+  .cards-container {
   }
 }
