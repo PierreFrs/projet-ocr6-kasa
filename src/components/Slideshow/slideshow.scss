@@ -1,0 +1,57 @@
+@import "../../style/colors.scss";
+
+.slideshow {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .arrow-container {
+    width: 96px;
+    height: 120px;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+  }
+
+  .arrow-container-previous {
+    left: 0;
+    background-image: url("../../assets/arrow_back.png");
+  }
+
+  .arrow-container-next {
+    right: 0;
+    background-image: url("../../assets/arrow_forward.png");
+  }
+
+  .picture-count {
+    position: absolute;
+    bottom: 25px;
+    font-size: 1.125rem;
+    color: $white;
+  }
+
+  .picture-container {
+    width: 100%;
+    max-width: 1240px;
+    max-height: 415px;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .active-picture {
+      width: 100%;
+    }
+  }
+}
