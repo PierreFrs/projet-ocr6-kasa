@@ -3,9 +3,11 @@ import "./collapse.scss"
 
 const Collapse = ({value, index, toggleCollapse}) => {
   return (
-    <div className={`collapse ${value.open ? 'open' : ''}`} key={index}>
+    <div className={`collapse ${value.open ? 'open' : ''}`}>
       <h3 className='collapse-title'  onClick={() => toggleCollapse(index)}>{value.title}</h3>
-      <p className="collapse-paragraphe">{value.content}</p>
+      {Array.isArray(value.content) ? 
+        value.content.map((item, i) => <p key={i} className="collapse-paragraphe">{item}</p>) :
+        <p className="collapse-paragraphe">{value.content}</p>}
     </div>
   )
 };

@@ -20,7 +20,7 @@ const APropos = () => {
         <Banner />
         <div className="collapses-container">
             {values.map((value, i, title) => (
-                <Collapse key={title} value={value} index={i} toggleCollapse={toggleCollapse} />
+                <Collapse key={title + i} value={value} index={i} toggleCollapse={toggleCollapse} />
             ))}
         </div>
         </section>)
