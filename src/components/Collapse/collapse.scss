@@ -1,64 +1,70 @@
 @import "../../style/colors.scss";
 
-.collapse {
-  max-width: 1024px;
-  border-radius: 10px;
-  background-color: $background-color2;
-  overflow: hidden;
-
-  .collapse-title {
-    font-size: 1.5rem;
-    font-weight: normal;
-    color: $white;
-    background-color: $red;
-    padding: 10px;
+.collapse-container {
+  .collapse {
+    max-width: 1024px;
     border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-  }
-
-  .collapse-arrow {
-    position: absolute;
-    top: 50%;
-    right: 0px;
-    margin-right: 10px;
-    transform: translateY(-50%);
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-
-    background-image: url("../../assets/arrow.png");
-    background-position: center;
-    background-size: contain;
-    background-repeat: repeat;
-
-    transition: transform 0.5s ease;
-  }
-
-  .collapse-paragraphe-container {
-    max-height: 0;
+    background-color: $background-color2;
     overflow: hidden;
-    transition: max-height 0.4s ease-out;
 
-    .collapse-paragraphe {
-      color: $red;
-      font-size: 1.125rem;
-      font-weight: 400;
-      padding: 20px;
+    .collapse-title {
+      font-size: 1.5rem;
+      font-weight: normal;
+      color: $white;
+      background-color: $red;
+      padding: 10px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
     }
 
-    .equipement-item {
-      list-style-type: none;
+    .collapse-arrow {
+      position: absolute;
+      top: 50%;
+      right: 0px;
+      margin-right: 10px;
+      transform: translateY(-50%);
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+
+      background-image: url("../../assets/arrow.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: repeat;
+
+      transition: transform 0.5s ease;
     }
 
-    .equipement-item:not(:last-child) {
-      margin-bottom: 5px;
+    .collapse-paragraphe-container {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out;
+
+      .collapse-paragraphe {
+        color: $red;
+        font-size: 1.125rem;
+        font-weight: 400;
+        padding: 20px;
+      }
+
+      .equipement-item {
+        list-style-type: none;
+      }
+
+      .equipement-item:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+
+    &.open .collapse-title .collapse-arrow {
+      transform: translateY(-50%) rotate(180deg);
     }
   }
 
-  &.open .collapse-title .collapse-arrow {
-    transform: translateY(-50%) rotate(180deg);
+  &.open .collapse {
+    background-color: $background-color2;
   }
 }
