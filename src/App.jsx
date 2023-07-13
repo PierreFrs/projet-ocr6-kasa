@@ -18,7 +18,7 @@ const App = () => {
           path="/fiche-logement/:logement-id"
           element={<FicheLogement />}
         />
-        <Route path="*" element={<Error />} />
+        <Route path="*" element={<Error />} status={404}  />
       </Routes>
       <Footer />
     </Router>

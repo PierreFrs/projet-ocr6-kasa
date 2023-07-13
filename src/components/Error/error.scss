@@ -1,0 +1,27 @@
+@import "../../style/colors.scss";
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $red;
+
+  .error-code {
+    font-size: 18rem;
+    font-weight: 700;
+    margin-top: 140px;
+  }
+
+  .error-description {
+    font-size: 2.25rem;
+    margin-top: 140px;
+  }
+
+  .nav-link {
+    font-size: 1.125rem;
+    margin-top: 140px;
+    color: $red;
+    margin-bottom: 140px;
+  }
+}
