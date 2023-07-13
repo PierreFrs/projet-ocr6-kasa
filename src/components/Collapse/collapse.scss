@@ -4,49 +4,55 @@
   background-color: $background-color2;
   border-radius: 10px;
   max-width: 1024px;
-  height: fit-content;
 
-  .collapse-title-container {
+  .collapse-title {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: $white;
     background-color: $red;
     padding: 10px;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+  }
 
-    .collapse-title {
-      font-size: 1.5rem;
-      font-weight: normal;
-      color: $white;
-    }
+  .collapse-title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    margin-right: 10px;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
 
-    .arrow-container {
-      width: 32px;
-      cursor: pointer;
+    background-image: url("../../assets/arrow.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
 
-      .arrow {
-        transition: all 0.4s ease;
-      }
-    }
+    transition: transform 0.5s ease;
   }
 
   .collapse-paragraphe {
     color: $red;
     font-size: 1.125rem;
     font-weight: 400;
-    padding: 20px;
-    opacity: 0;
-    max-height: 0;
-    overflow-y: hidden;
-    transition: all 0.4s ease;
+    height: 0;
+    overflow: hidden;
+    padding: 0px;
+    transition: all 0.5s ease-out;
   }
 }
 
-.collapse.open .arrow {
-  transform: translateY(-50%) rotate(180°);
+.collapse.open .collapse-title::after {
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .collapse.open .collapse-paragraphe {
-  max-height: fit-content;
-  opacity: 1;
+  padding: 20px;
+  height: fit-content;
 }

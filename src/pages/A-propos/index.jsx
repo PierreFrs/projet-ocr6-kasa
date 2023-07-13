@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Banner from "../../components/Banner"
 import Collapse from "../../components/Collapse"
 import valeurs from "../../data/valeurs.json"
+import "./a-propos.scss"
 
 const APropos = () => {
     const [values, setValues] = useState(valeurs);
@@ -10,8 +11,6 @@ const APropos = () => {
         setValues(values.map((value, i) => {
             if (i === index) {
                 value.open = !value.open
-            } else {
-                value.open = false;
             }
             return value;
         }))
