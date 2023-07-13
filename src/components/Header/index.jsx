@@ -8,10 +8,11 @@ const Header = () => {
   const isHomePage = location.pathname === "/";
   const isAProposPage = location.pathname === "/a-propos";
     return <header>
-        <div className="logo-container">
-            <img src={logoRed} alt="Logo de Kasa" />
-        </div>
-        
+        <Link  to="/">
+            <div className="logo-container">
+                <img src={logoRed} alt="Logo de Kasa" />
+            </div>
+        </Link>
         <nav><Link to="/" className={`nav-link ${isHomePage ? "" : "unactive-nav-link"}`}>Accueil</Link>
             <Link to="/a-propos" className={`nav-link ${isAProposPage ? "" : "unactive-nav-link"}`}>A Propos</Link>
         </nav>
