@@ -16,7 +16,7 @@ const APropos = () => {
         }))
     }
 
-    return (<section className="a-propos">
+    return (<section className="a-propos page">
         <Banner />
         <div className="collapses-container">
             {values.map((value, i, title) => (

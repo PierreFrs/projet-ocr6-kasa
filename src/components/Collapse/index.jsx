@@ -14,7 +14,7 @@ const Collapse = ({value, index, toggleCollapse}) => {
 
 
   return (
-    <div className={`collapse ${value.open ? 'open' : ''}`}>
+    <div className={`collapse ${value.open ? 'open' : ''}`} >
       <h3 className='collapse-title'>
         {value.title}
         <div className='collapse-arrow' onClick={() => toggleCollapse(index)} />

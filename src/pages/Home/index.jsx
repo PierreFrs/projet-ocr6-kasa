@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <section className="home">
+    <section className="home page">
       <Banner />
       <div className="cards-container">
         {rentals.map((rental) => (

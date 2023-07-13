@@ -1,0 +1,88 @@
+@import "../../style/colors.scss";
+@import "../../style/page-layout.scss";
+
+.fiche-logement-description {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .basic-info-container {
+    display: flex;
+    justify-content: space-between;
+
+    .title-location-badges-container {
+      display: flex;
+      flex-direction: column;
+
+      .fiche-logement-title {
+        font-size: 2.25rem;
+        font-weight: normal;
+        color: $red;
+      }
+
+      .location {
+        font-size: 1.125rem;
+        color: $red;
+      }
+
+      .badges-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+
+        .badge {
+          size: 0.875rem;
+          color: $white;
+          width: 115px;
+          height: fit-content;
+          padding: 3px 0;
+          background-color: $red;
+          border-radius: 10px;
+          text-align: center;
+          vertical-align: text-top;
+        }
+      }
+    }
+
+    .host-infos-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .host-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .host-name {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+          font-size: 1.125rem;
+          color: $red;
+        }
+
+        .host-picture-container {
+          width: 64px;
+          height: 64px;
+          border-radius: 100%;
+          overflow: hidden;
+
+          .host-picture {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .a-propos-collapses-container {
+    display: flex;
+    gap: 76px;
+
+    > * {
+      flex: 1;
+    }
+  }
+}
