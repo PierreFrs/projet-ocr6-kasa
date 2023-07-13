@@ -17,8 +17,9 @@ const Home = () => {
               pathname: `/fiche-logement/${rental.id}`,
               state: { logement: rental },
             }}
+            className='card-link'
           >
-            <Card title={rental.title} />
+            <Card title={rental.title} cover={rental.cover} />
           </Link>
         ))}
       </div>

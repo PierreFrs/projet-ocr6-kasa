@@ -4,6 +4,6 @@ $background-color2: #f6f6f6;
 $white: #ffffff;
 $red: #ff6060;
 $black: #000000;
-$gradient-start: rgba(250, 250, 250, 0);
-$gradient-end: rgba(0, 0, 0, 0.5);
+$gradient-start: rgb(255, 96, 96);
+$gradient-end: rgb(0, 0, 0);
 $linearRedToBlack: linear-gradient(to bottom, $gradient-start, $gradient-end);
