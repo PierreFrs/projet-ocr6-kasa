@@ -19,8 +19,8 @@ const APropos = () => {
     return (<section className="a-propos">
         <Banner />
         <div className="collapses-container">
-            {values.map((value, i) => (
-                <Collapse value={value} index={i} toggleCollapse={toggleCollapse} />
+            {values.map((value, i, title) => (
+                <Collapse key={title} value={value} index={i} toggleCollapse={toggleCollapse} />
             ))}
         </div>
         </section>)

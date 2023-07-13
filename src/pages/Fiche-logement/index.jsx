@@ -1,7 +1,23 @@
-import React from "react";
+import React from 'react';
+import './fiche-logement.scss';
+import Slideshow from '../../components/Slideshow';
+import { useParams } from 'react-router-dom';
+import rentals from '../../data/rentals.json';
 
 const FicheLogement = () => {
-    return <div>Fiche logement</div>
-}
+  const { logementId } = useParams();
+  const logement = rentals.find((rental) => rental.id === logementId);
 
-export default FicheLogement
+  return (
+    <section className="fiche-logement">
+      <Slideshow />
+      <div className="fiche-logement-description">
+        <h2 className="fiche-logement-title">{logement.title}</h2>
+        <p className="location">{logement.location}</p>
+      </div>
+      
+    </section>
+  );
+};
+
+export default FicheLogement;
