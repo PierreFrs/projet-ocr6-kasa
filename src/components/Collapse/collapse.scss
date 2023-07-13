@@ -18,8 +18,7 @@
     position: relative;
   }
 
-  .collapse-title::after {
-    content: "";
+  .collapse-arrow {
     position: absolute;
     top: 50%;
     right: 0px;
@@ -40,7 +39,7 @@
   .collapse-paragraphe-container {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.8s ease-out;
+    transition: max-height 0.4s ease-out;
 
     .collapse-paragraphe {
       color: $red;
@@ -58,11 +57,7 @@
     }
   }
 
-  &.open .collapse-title::after {
+  &.open .collapse-title .collapse-arrow {
     transform: translateY(-50%) rotate(180deg);
   }
-
-  // &.open .collapse-paragraphe-container {
-  //   max-height: 500px;
-  // }
 }
