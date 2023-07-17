@@ -1,5 +1,6 @@
 @import "../../style/colors.scss";
 @import "../../style/page-layout.scss";
+@import "../../style/responsive-breakpoints.scss";
 
 .fiche-logement-description {
   display: flex;
@@ -17,12 +18,13 @@
 
       .fiche-logement-title {
         font-size: 2.25rem;
-        font-weight: normal;
+        font-weight: 500;
         color: $red;
       }
 
       .location {
         font-size: 1.125rem;
+        font-weight: 500;
         color: $red;
       }
 
@@ -33,7 +35,8 @@
         margin-top: 20px;
 
         .badge {
-          size: 0.875rem;
+          font-size: 0.875rem;
+          font-weight: 500;
           color: $white;
           min-width: 115px;
           height: fit-content;
@@ -61,6 +64,7 @@
           flex-direction: column;
           gap: 3px;
           font-size: 1.125rem;
+          font-weight: 500;
           color: $red;
         }
 
@@ -84,6 +88,67 @@
 
     > * {
       flex: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobileMaxWidth) {
+  .fiche-logement {
+    .fiche-logement-description {
+      margin-top: 15px;
+      gap: 13px;
+
+      .basic-info-container {
+        flex-direction: column;
+
+        .title-location-badges-container {
+          .fiche-logement-title {
+            font-size: 1.125rem;
+          }
+          .location {
+            font-size: 0.875rem;
+            margin-top: 10px;
+          }
+          .badges-container {
+            margin-top: 10px;
+
+            .badge {
+              font-size: 0.625rem;
+              min-width: 84px;
+              padding: 2px 5px;
+            }
+          }
+        }
+        .host-infos-container {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 16px;
+
+          .host-container {
+            order: 2;
+
+            .host-name {
+              font-size: 0.75rem;
+            }
+            .host-picture-container {
+              width: 32px;
+              height: 32px;
+            }
+          }
+          .host-ratings-container {
+            width: 98px;
+
+            .star {
+              width: 18px;
+            }
+          }
+        }
+      }
+    }
+    .a-propos-collapses-container {
+      flex-direction: column;
+      gap: 20px;
     }
   }
 }

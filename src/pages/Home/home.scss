@@ -19,5 +19,14 @@
 
 @media screen and (max-width: $mobileMaxWidth) {
   .cards-container {
+    flex-direction: column;
+    gap: 20px;
+    background-color: $white;
+    margin-top: 22px;
+    padding: 0;
+
+    .card-link {
+      width: 100%;
+    }
   }
 }

@@ -1,4 +1,5 @@
 @import "../../style/colors.scss";
+@import "../../style/responsive-breakpoints.scss";
 
 .slideshow {
   position: relative;
@@ -7,8 +8,8 @@
   align-items: center;
 
   .arrow-container {
-    width: 96px;
-    height: 120px;
+    width: 90px;
+    height: 110px;
     display: flex;
     position: absolute;
     top: 50%;
@@ -52,6 +53,22 @@
 
     .active-picture {
       width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: $mobileMaxWidth) {
+  .slideshow {
+    .arrow-container {
+      width: 24px;
+      height: 24px;
+    }
+    .picture-count {
+      display: none;
+    }
+    .picture-container {
+      max-height: 255px;
+      border-radius: 10px;
     }
   }
 }

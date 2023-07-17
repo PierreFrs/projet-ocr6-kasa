@@ -1,4 +1,5 @@
 @import "../../style/colors.scss";
+@import "../../style/responsive-breakpoints.scss";
 
 header {
   width: 100%;
@@ -9,7 +10,11 @@ header {
 
   .logo-container {
     width: 210px;
-    height: 68px;
+    height: fit-content;
+
+    .logo-red {
+      width: 100%;
+    }
   }
   nav {
     display: flex;
@@ -20,9 +25,28 @@ header {
     .nav-link {
       color: $red;
       font-size: 1.5rem;
+      font-weight: 500;
     }
     .unactive-nav-link {
       text-decoration: none;
+    }
+  }
+}
+
+@media screen and (max-width: $mobileMaxWidth) {
+  header {
+    padding: 20px;
+
+    .logo-container {
+      width: 145px;
+    }
+    nav {
+      gap: 26px;
+
+      .nav-link {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+      }
     }
   }
 }

@@ -1,4 +1,5 @@
 @import "../../style/colors.scss";
+@import "../../style/responsive-breakpoints.scss";
 
 .collapse-container {
   .collapse {
@@ -47,7 +48,7 @@
         color: $red;
         font-size: 1.125rem;
         font-weight: 400;
-        padding: 20px;
+        padding: 18px 20px 20px;
       }
 
       .equipement-item {
@@ -66,5 +67,27 @@
 
   &.open .collapse {
     background-color: $background-color2;
+  }
+}
+
+@media screen and (max-width: $mobileMaxWidth) {
+  .collapse-container {
+    .collapse {
+      .collapse-title {
+        font-size: 0.75rem;
+      }
+
+      .collapse-arrow {
+        width: 24px;
+        height: 24px;
+      }
+
+      .collapse-paragraphe-container {
+        .collapse-paragraphe {
+          font-size: 0.75rem;
+          padding: 13px 20px 20px;
+        }
+      }
+    }
   }
 }

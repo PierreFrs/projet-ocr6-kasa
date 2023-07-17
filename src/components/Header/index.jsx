@@ -5,12 +5,12 @@ import "./header.scss"
 
 const Header = () => {
     const location = useLocation();
-  const isHomePage = location.pathname === "/";
-  const isAProposPage = location.pathname === "/a-propos";
+    const isHomePage = location.pathname === "/";
+    const isAProposPage = location.pathname === "/a-propos";
     return <header>
         <Link  to="/">
             <div className="logo-container">
-                <img src={logoRed} alt="Logo de Kasa" />
+                <img className="logo-red" src={logoRed} alt="Logo de Kasa" />
             </div>
         </Link>
         <nav><Link to="/" className={`nav-link ${isHomePage ? "" : "unactive-nav-link"}`}>Accueil</Link>

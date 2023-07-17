@@ -1,6 +1,14 @@
+@import "../style/responsive-breakpoints.scss";
+
 .page {
   padding: 0 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media only screen and (max-width: $mobileMaxWidth) {
+  .page {
+    padding: 0 20px;
+  }
 }

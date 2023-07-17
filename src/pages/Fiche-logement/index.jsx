@@ -52,11 +52,11 @@ const FicheLogement = () => {
     const stars = [];
 
     for (let i = 0; i < activeStars; i++) {
-      stars.push(<img key={i} src={activeStar} alt="Active Star" />);
+      stars.push(<img className='star' key={i} src={activeStar} alt="Active Star" />);
     }
 
     for (let i = 0; i < inactiveStars; i++) {
-      stars.push(<img key={activeStars + i} src={unActiveStar} alt="Inactive Star" />);
+      stars.push(<img className='star' key={activeStars + i} src={unActiveStar} alt="Inactive Star" />);
     }
 
     return stars;
@@ -76,7 +76,6 @@ const FicheLogement = () => {
           </div>
           <div className="host-infos-container">
             <div className="host-container">
-              <div></div>
               <p className="host-name">
                 <span className="host-first-name">{firstName}</span>
                 <span className="host-last-name">{lastName}</span>
@@ -89,7 +88,7 @@ const FicheLogement = () => {
             {renderStars(logement.rating)}
           </div>
         </div>
-        </div>
+      </div>
         <div className="a-propos-collapses-container">
           {infos.map((info, index) => (
             <Collapse key={info.id} value={info} index={index} toggleCollapse={toggleCollapse} />
