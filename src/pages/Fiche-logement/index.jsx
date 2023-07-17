@@ -8,12 +8,13 @@ import activeStar from "../../assets/star-active.png"
 import unActiveStar from "../../assets/star-inactive.png"
 
 const FicheLogement = () => {
-  const { logementId } = useParams();
+
   const navigate = useNavigate();
 
+  const { logementId } = useParams();
   const logement = rentals.find((rental) => rental.id === logementId);
 
-    // Id not found handling
+  // Id not found handling
  useEffect(() => {
     if (!logement) {
       navigate('/error');
@@ -25,7 +26,7 @@ const FicheLogement = () => {
   const firstName = names[0];
   const lastName = names[1];
 
-  // Collapse data
+  // Collapse data setting
   const descObj = {
     id: logement?.id + '-desc',
     title: 'Description',

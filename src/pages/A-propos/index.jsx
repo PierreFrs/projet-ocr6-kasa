@@ -5,6 +5,8 @@ import valeurs from "../../data/valeurs.json"
 import "./a-propos.scss"
 
 const APropos = () => {
+
+    // Handle the dynamic display of the collapses infos from valeurs.json
     const [values, setValues] = useState(valeurs);
 
     const toggleCollapse = (index) => {

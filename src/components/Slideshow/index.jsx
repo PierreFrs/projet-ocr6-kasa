@@ -3,8 +3,6 @@ import { useParams } from 'react-router-dom';
 import rentals from '../../data/rentals.json';
 import "./slideshow.scss"
 
-
-
 const Slideshow = () => {
 
   const { logementId } = useParams();
@@ -14,7 +12,8 @@ const Slideshow = () => {
   const [activePicture, setActivePicture] = useState(logement.pictures[0]);
   const picturesCount = logement.pictures.length;
   
-    const nextPicture = () => {
+  // Handle the prev and next buttons
+  const nextPicture = () => {
     setPictureIndex((prevIndex) => (prevIndex + 1) % picturesCount);
     setActivePicture(logement.pictures[(pictureIndex + 1) % picturesCount]);
   };

@@ -4,9 +4,12 @@ import logoRed from "../../assets/logo-red.png";
 import "./header.scss"
 
 const Header = () => {
+
+    // Handle the nav links active state
     const location = useLocation();
     const isHomePage = location.pathname === "/";
     const isAProposPage = location.pathname === "/a-propos";
+    
     return <header>
         <Link  to="/">
             <div className="logo-container">

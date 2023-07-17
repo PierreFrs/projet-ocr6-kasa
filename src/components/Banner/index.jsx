@@ -4,6 +4,7 @@ import "./banner.scss";
 
 
 const Banner = () => {
+  // Handle the two backgrounds if on home page or about page
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   return (

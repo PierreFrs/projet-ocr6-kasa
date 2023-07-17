@@ -2,6 +2,8 @@ import React, { useRef, useEffect, useState } from 'react';
 import "./collapse.scss"
 
 const Collapse = ({value, index, toggleCollapse}) => {
+
+  // Handle the closing, opening and animation of the collapse component
   const contentRef = useRef();
   const [maxHeight, setMaxHeight] = useState('Opx');
   useEffect(() => {
