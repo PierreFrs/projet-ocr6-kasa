@@ -73,8 +73,12 @@
 @media screen and (max-width: $mobileMaxWidth) {
   .collapse-container {
     .collapse {
+      border-radius: 5px;
+
       .collapse-title {
         font-size: 0.75rem;
+        padding: 8px;
+        border-radius: 5px;
       }
 
       .collapse-arrow {
