@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './fiche-logement.scss';
 import Slideshow from '../../components/Slideshow';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import rentals from '../../data/rentals.json';
 import Collapse from '../../components/Collapse';
 import activeStar from "../../assets/star-active.png"
@@ -9,25 +9,34 @@ import unActiveStar from "../../assets/star-inactive.png"
 
 const FicheLogement = () => {
   const { logementId } = useParams();
+  const navigate = useNavigate();
+
   const logement = rentals.find((rental) => rental.id === logementId);
 
+    // Id not found handling
+ useEffect(() => {
+    if (!logement) {
+      navigate('/error');
+    }
+  }, [logement, navigate]);
+
   // Separate first name from last name
-  const names = logement.host.name.split(' ');
+  const names = logement?.host.name.split(' ') || [];
   const firstName = names[0];
   const lastName = names[1];
 
   // Collapse data
   const descObj = {
-    id: logement.id + '-desc',
+    id: logement?.id + '-desc',
     title: 'Description',
-    content: logement.description,
+    content: logement?.description,
     open: false,
   }
 
   const equipObj = {
-    id: logement.id + '-equip',
+    id: logement?.id + '-equip',
     title: 'Equipments',
-    content: logement.equipments,
+    content: logement?.equipments,
     open: false,
   }
 
@@ -61,6 +70,9 @@ const FicheLogement = () => {
 
     return stars;
   };
+
+  // Returns null and doesn't execute the rest of the code
+  if (!logement) return null;
 
   return (
     <section className="fiche-logement page">
