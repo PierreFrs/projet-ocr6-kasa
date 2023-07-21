@@ -8,13 +8,14 @@ import activeStar from "../../assets/star-active.png"
 import unActiveStar from "../../assets/star-inactive.png"
 
 const FicheLogement = () => {
-
+  // Retrieves where we are in the app
   const navigate = useNavigate();
-
+  // Retrieves the rental URL ("/fiche-logement/:logementId")
   const { logementId } = useParams();
+  // Finds a particular rental house with the id
   const logement = rentals.find((rental) => rental.id === logementId);
 
-  // Id not found handling
+  // Id not found handling => redirects to the error page
  useEffect(() => {
     if (!logement) {
       navigate('/error');
@@ -26,7 +27,8 @@ const FicheLogement = () => {
   const firstName = names[0];
   const lastName = names[1];
 
-  // Collapse data setting
+  // Collapse data setting (could be in a separate json file but not worth it since it is small)
+  // logement.id returns undefined if not found : "?" => avoid errors if logement is not found before DOM rendering
   const descObj = {
     id: logement?.id + '-desc',
     title: 'Description',
@@ -41,9 +43,9 @@ const FicheLogement = () => {
     open: false,
   }
 
-  // Function to open/close collapse
+  // Sets the right data wether it 's the desc or equip collapse
   const [infos, setInfos] = useState([descObj, equipObj]);
-
+  // Function to open/close collapse
   const toggleCollapse = (index) => {
         setInfos(infos.map((info, i) => {
             if (i === index) {
@@ -53,12 +55,12 @@ const FicheLogement = () => {
         }))
     }
 
-  // Function that converts ratings to stars
+  // Function that converts ratings to stars. Takes rating as argument and convert it into active stars, calculate what is left as inactive stars and push them into the stars array
   const renderStars = (rating) => {
     const totalStars = 5;
     const activeStars = Math.round(rating);
     const inactiveStars = totalStars - activeStars;
-
+    
     const stars = [];
 
     for (let i = 0; i < activeStars; i++) {

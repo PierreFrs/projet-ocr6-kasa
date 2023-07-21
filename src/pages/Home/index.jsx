@@ -11,6 +11,7 @@ const Home = () => {
       <Banner />
       <div className="cards-container">
         {rentals.map((rental) => (
+          // Encapsulate cards inside a link to it's own page
           <Link
             key={rental.id}
             to={{

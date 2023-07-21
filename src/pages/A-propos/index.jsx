@@ -8,8 +8,9 @@ const APropos = () => {
 
     // Handle the dynamic display of the collapses infos from valeurs.json
     const [values, setValues] = useState(valeurs);
-
+    // Handles the open value, takes "index" as an argument which corresponds to the element in the valeurs.json file
     const toggleCollapse = (index) => {
+        // Iterates through the open elements of valeurs.json and set it to true if previously false and vice-versa
         setValues(values.map((value, i) => {
             if (i === index) {
                 value.open = !value.open
