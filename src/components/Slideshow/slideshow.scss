@@ -2,6 +2,8 @@
 @import "../../style/responsive-breakpoints.scss";
 
 .slideshow {
+  width: 100%;
+  max-width: 1240px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -53,6 +55,8 @@
 
     .active-picture {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }
@@ -67,7 +71,7 @@
       display: none;
     }
     .picture-container {
-      max-height: 255px;
+      height: 255px;
       border-radius: 10px;
     }
   }
